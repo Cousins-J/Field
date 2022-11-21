@@ -10,8 +10,6 @@ from pathlib import Path
 import cv2
 import sys
 import math
-import tensorflow as tf
-import classify as cls
 
 app = Flask(__name__)
 
