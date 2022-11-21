@@ -3,7 +3,6 @@ from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 import os
-from wtforms.validators import InputRequired
 from flask import request
 import tempfile
 from pathlib import Path
@@ -35,7 +34,7 @@ def uploadvid():
                 cv2.imwrite(filename='./data/frame' + str(currentframe) + '.jpg',img= frame)
                 currentframe +=1
                 
-                if currentframe == 9:
+                if currentframe == 50:
                     break
                 #if cv2.waitKey(1) & 0xFF == ord('q'):
                 #    break
